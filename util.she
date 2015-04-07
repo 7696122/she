@@ -1,0 +1,14 @@
+# -*- mode: sh; coding: utf-8; -*-
+#!/usr/bin/env bash
+
+# https://www.gitignore.io/docs#use-command-line-project
+function gi() {
+    case $OSTYPE in
+	linux*)
+	    curl -L -s https://www.gitignore.io/api/$@ ;
+	    ;;
+	darwin*)
+	    curl -L -s https://www.gitignore.io/api/$@ ;	    
+	    ;;
+    esac
+}

@@ -1,0 +1,4 @@
+# -*- mode: sh; coding: utf-8; -*-
+XSHROOT=$HOME/Dropbox/she
+source $XSHROOT/util.she
+source $XSHROOT/setup.she
