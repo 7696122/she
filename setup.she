@@ -175,6 +175,10 @@ function setup_ruby() {
     export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 }
 
+function setup_homebrew {
+    export PATH=/usr/local/sbin:$PATH
+}
+
 function setup_linuxbrew() {
     export PATH="$HOME/.linuxbrew/bin:$PATH"
     export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
@@ -197,6 +201,9 @@ setup_perl
 setup_python
 setup_ruby
 setup_go
+setup_homebrew
 setup_linuxbrew
 
 setup_path
+
+print_os

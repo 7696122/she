@@ -1,6 +1,8 @@
 # -*- mode: sh; coding: utf-8; -*-
 #!/usr/bin/env bash
 
+echo "> She's Util"
+
 # https://www.gitignore.io/docs#use-command-line-project
 function gi() {
     case $OSTYPE in
@@ -10,5 +12,15 @@ function gi() {
 	darwin*)
 	    curl -L -s https://www.gitignore.io/api/$@ ;	    
 	    ;;
+    esac
+}
+
+function print_os () {
+    case "$OSTYPE" in
+	solaris*) echo "SOLARIS" ;;
+	darwin*)  echo "OSX" ;; 
+	linux*)   echo "LINUX" ;;
+	bsd*)     echo "BSD" ;;
+	*)        echo "unknown: $OSTYPE" ;;
     esac
 }
